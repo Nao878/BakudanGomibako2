@@ -20,12 +20,12 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            rb.velocity = new Vector2(-speed, 0)*Time.deltaTime*100;
+            rb.linearVelocity = new Vector2(-speed, 0)*Time.deltaTime*100;
         }
 
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            rb.velocity = new Vector2(speed, 0)*Time.deltaTime*100;
+            rb.linearVelocity = new Vector2(speed, 0)*Time.deltaTime*100;
         }
 
         if (Input.GetKeyDown(KeyCode.Space) && finishCount < 10)
@@ -50,7 +50,7 @@ public class PlayerController : MonoBehaviour
 
         if (!Input.anyKey)
         {
-            rb.velocity = new Vector2(0, 0);
+            rb.linearVelocity = new Vector2(0, 0);
         }
 
         if (ballCount > 2)
